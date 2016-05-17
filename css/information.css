@@ -1,0 +1,131 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: "黑体";
+}
+li,
+ol,
+ul {
+    list-style: none outside;
+}
+html {
+    font-size: 62.5%;
+}
+
+.content {
+    width: 100%;
+}
+@media only screen and (min-width: 640px) {
+    .container {
+        width: 640px;
+        margin: 0px auto 0px auto;
+        background-color: #fff;
+        height: 700px;
+    }
+    body {
+        background-color: #eee;
+    }
+}
+
+/*@media only screen and (min-width: 320px) and (max-width: 640px) {
+    
+}
+*/
+.header{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(138,188,101);
+	text-align: center;
+	line-height: 50px;
+	font-size: 2rem;
+	color: white;
+}
+.header span{
+	float: left;
+	display: inline-block;
+	width: 50px;
+	font-size: 1.5rem;
+	margin-right: -50px;
+}
+.status{
+	overflow: auto;
+}
+.status>li{
+	border-bottom: 1px solid #eee;
+	height: 40px;
+	width: calc(50% - 10px);
+	float: left;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 1.4rem;
+}
+.status>li:nth-child(odd){
+	text-align: center;
+}
+.information{
+	overflow: auto;
+	margin-top: 20px;
+}
+.information>li{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+}
+.information>li:nth-child(odd){
+	width: 30%;
+	text-align: center;
+	font-size: 1.5rem;
+}
+.information>li:nth-child(even){
+	width: 70%;
+}
+.information>li>input{
+	width: 70%;
+	border:1px solid #eee;
+	height: 40px;
+	padding-left: 10px;
+}
+.button {
+    width: 40%;
+    height: 40px;
+    margin: 40px auto 0px auto;
+    display: block;
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration:none;
+}
+
+.button:link{
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+}
+
+.button:visited{
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgba(138, 188, 101, 1);
+}
+
+.button:active {
+    background-color: rgba(138, 188, 101, 0.7);
+}
+.ok{
+	width: 50%;
+	height: 100px;
+	border:1px solid #eee;
+	padding: 5%;
+	font-size: 1.6rem;
+	text-align: left;
+	background-color: rgb(138,188,101);
+	color: white;
+	line-height: 25px;
+	margin:100px auto 0px auto;
+}

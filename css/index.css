@@ -1,0 +1,167 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: "黑体";
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.content {
+    width: 100%;
+}
+
+.top {
+    width: 100%;
+    height: 280px;
+    background-color: rgb(138, 188, 101);
+    background-image: url("../img/logo.png");
+    background-size: 20% auto;
+    background-repeat: no-repeat;
+    background-position: 20px 5px;
+    text-align: center;
+}
+
+.top p {
+    color: white;
+    font-size: 3rem;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.top>span {
+    display: inline-block;
+    border: 2px solid white;
+    border-right-color: white!important;
+    height: 46px;
+    float: left;
+    color: white;
+    line-height: 46px;
+    font-size: 2rem;
+}
+
+.top input {
+    height: 46px;
+    border: 2px solid white;
+    border-left-width: 0px;
+    float: left;
+    padding-left: 10px;
+    font-size: 2rem;
+    color: rgb(138, 188, 101);
+}
+
+.top p:last-child {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 640px) {
+    .container {
+        width: 640px;
+        margin: 0px auto 0px auto;
+        background-color: #fff;
+        height: 700px;
+    }
+    body {
+        background-color: #eee;
+    }
+    .top>span {
+        width: 70px;
+        margin-left: calc(50% - 187px);
+    }
+    .top>input {
+        width: 288px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+    .top>span {
+        width: 50px;
+        margin-left: calc(50% - 132px);
+    }
+    .top input {
+        width: 198px;
+    }
+}
+
+.select {
+    margin-top: 20px;
+}
+
+.select>span {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: rgb(138, 188, 101);
+}
+
+select {
+    width: 70%;
+    height: 30px;
+    border: 1px solid #eee;
+}
+
+
+.meiqi {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    height: 30px;
+}
+
+.fukuan {
+    display: block;
+    margin-top: 20px;
+    color: rgb(138, 188, 101);
+    font-size: 1.5rem;
+    text-align: center;
+    height: 17px;
+}
+
+.fukuanzonge {
+    display: block;
+    height: 23px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(138, 188, 101);
+}
+
+.button {
+    width: 40%;
+    height: 40px;
+    margin: 40px auto 0px auto;
+    display: block;
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration:none;
+}
+
+.button:link{
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+}
+
+.button:visited{
+    background-color: rgba(138, 188, 101, 1);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgba(138, 188, 101, 1);
+}
+
+.button:active {
+    background-color: rgba(138, 188, 101, 0.7);
+}
