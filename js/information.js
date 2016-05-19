@@ -32,11 +32,35 @@ $(document).ready(function() {
         default:
             break;
     }
+    var yongtu;
+    switch (status.yongtu){
+                    case '1':
+            yongtu="消费购物";
+                    break;  
+                    case '2':
+            yongtu="应急周转";
+                    break; 
+                    case '3':
+            yongtu="培训留学";
+                    break; 
+                    case '4':
+            yongtu="旅行";
+                    break; 
+                    case '5':
+            yongtu="微创业";
+                    break; 
+                    case '6':
+            yongtu="就业准备";
+                    break;            
+                    default:
+                        break;
+                }
     $(".status li:nth-child(6)").text(shichang);
     $(".status li:nth-child(8)").text(status.qsxf);
     $(".status li:nth-child(10)").text(status.qlv);
-    $(".status li:nth-child(12)").text(status.mqyhb);
-    $(".status li:nth-child(14)").text(status.mqyhz);
+    $(".status li:nth-child(12)").text(yongtu);
+    $(".status li:nth-child(14)").text(status.mqyhb);
+    $(".status li:nth-child(16)").text(status.mqyhz);
 
     $(".header span").click(function() {
         window.location.href = "index.html?" + data;
@@ -45,13 +69,23 @@ $(document).ready(function() {
         $(this).css('borderColor', '#eee');
     });
     $(".button").click(function() {
-        if (!$("#name").val()) {
+        var idcard=$("#idcard").val();
+        var name=$("#name").val();
+        var phonenumber=$("#phonenumber").val();
+        var school=$("#school").val();
+        if (!name) {
             $("#name").css('borderColor', 'red');
-        } else if (!(/^1[0-9]{10}/.test($("#phonenumber").val()))) {
+        } else if (!(/^1[0-9]{10}/.test(phonenumber))) {
             $("#phonenumber").css('borderColor', 'red');
+        }else if((!/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/.test(idcard))&&!(/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|[X,x])$/.test(idcard))){
+            $("#idcard").css('borderColor', 'red');
+        }else if(!school){
+            $("#school").css('borderColor', 'red');
         }else{
-        	status.name=$("#name").val();
-        	status.phonenumber=$("#phonenumber").val();
+        	status.name=name;
+        	status.phonenumber=phonenumber;
+            status.idcard=idcard;
+            status.school=school;
         	$.ajax({
         		"url": 'php/index.php',
         		"type": 'get',

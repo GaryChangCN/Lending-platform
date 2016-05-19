@@ -94,6 +94,7 @@ html {
     display: inline-block;
     width: 32%;
     text-align: center;
+    font-size: 2rem;
 }
 
 .title {
@@ -107,8 +108,13 @@ select {
     height: 30px;
     border: 1px solid #eee;
 }
-
-
+.yongtu{
+    margin: 15px auto 0px auto;
+    text-align: center;
+}
+.yongtu>select{
+    width: 80%;
+}
 .meiqi {
     text-align: center;
     font-size: 2.5rem;

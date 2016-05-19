@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var status = new Object();
     status.code = false;
+    //返回时url信息填写
     (function() {
         var s= new Object();
         var data = window.location.search;
@@ -139,7 +140,15 @@ $(document).ready(function() {
             figur();
         }
     });
+    $(".yongtu select").focus(function(){
+        $(this).css('borderColor', '#eee');
+    });
     $(".button").click(function() {
+        var val=$(".yongtu select").val();
+        if(val=="false"){
+            $(".yongtu select").css('borderColor', 'red');
+        }else{
+            status.yongtu=val;
         if (status.code) {
             var a = new Date();
             status.time = a.getTime();
@@ -151,6 +160,7 @@ $(document).ready(function() {
             }
             var urlData = data.slice(0, data.length - 1);
             window.location.href = "information.html?" + urlData;
+        }
         }
     });
 });
