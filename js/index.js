@@ -17,7 +17,7 @@ $(document).ready(function() {
             s[key] = value;
         }
         $("#jine").val(s.zbj);
-        $(".qishu select option:eq("+s.qlx+")").attr('selected', '');;
+        $(".qishu select option:eq("+s.qlx+")").prop('selected', true);
         var jine = parseFloat($("#jine").val());
         if (jine < 1000 || jine > 10000 || isNaN(jine)) {
             $(".meiqi").text("");
